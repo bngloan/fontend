@@ -111,14 +111,26 @@ function Alluser() {
           }
         } catch (e) {}
         try {
-          if (user.imagedriving !== null) {
+          if (user.imagefront !== null) {
             let string = "";
-            const array = user.imagedriving.split("\\");
+            const array = user.imagefront.split("\\");
             string = "./" + array.join("/");
 
-            await API_URL.post(`api/people/deleteimagedriving`, {
+            await API_URL.post(`api/people/deleteimagefront`, {
               id: getId,
-              imagedrivingBackup: string,
+              imagefrontBackup: string,
+            });
+          }
+        } catch (e) {}
+        try {
+          if (user.imageback !== null) {
+            let string = "";
+            const array = user.imageback.split("\\");
+            string = "./" + array.join("/");
+
+            await API_URL.post(`api/people/deleteimageback`, {
+              id: getId,
+              imagebackBackup: string,
             });
           }
         } catch (e) {}
