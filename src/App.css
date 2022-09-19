@@ -1,0 +1,557 @@
+/* @import "~antd/dist/antd.css"; */
+@import 'antd/dist/antd.css'; 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
+html,body,a{
+  font-family: 'Sarabun', sans-serif; 
+  /* font-weight: 900;*/
+}
+.asty1:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.bg-image {
+
+  /* filter: blur(3px);
+  -webkit-filter: blur(2px); */
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+}
+.ant-table-content{
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.bg-text {
+
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+
+
+  width: 80%;
+  padding: auto 20px;
+
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+.myFont,h6,h1,p,label,b,input,option{
+  font-family: 'Sarabun', sans-serif;
+}
+.App {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: 'Sarabun', sans-serif;
+}
+.content {
+  font-family: 'Sarabun', sans-serif;
+  padding: 1rem;
+}
+
+.fontFamilyKanit{
+    font-family: 'Sarabun', sans-serif; 
+}
+
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: rgb(43, 43, 43);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  z-index: 50;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  margin-right: 8px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: rgb(146, 0, 165);
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+.bm-burger-button {
+    position: fixed;
+    width: 30px;
+    height: 25px;
+    left: 20px;
+    top: 18px;
+}
+@media (max-width: 700px) {
+
+  .ant-table-content{
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .bm-burger-button {
+    
+    width: 30px;
+    height: 20px;
+    left: 10px;
+    top: 18px;
+  }
+
+  .bg-text {
+    top: 15%;
+    font-size: 25px;
+  
+  }
+
+  .menu-button-container {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menu-toggle:checked ~ .menu li {
+    /* border: 1px solid #333; */
+    background-color: white;
+    border-bottom: 0.5px solid purple;
+    color: #7b2fc2;
+    height: 80px;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    background-color: white;
+    color: #7b2fc2;
+  }
+
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+
+  .bg-image {
+
+      background-position: center center;
+      background-repeat: no-repeat;
+    
+  }
+
+
+
+}
+
+
+
+.text_contant {
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+
+.label1 {
+  margin:0;
+  padding:10px;
+  width:auto;
+  max-width:300px;
+  height:auto;
+  background-color:#929292;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  text-align:center;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -webkit-transition:0.2s ease all;
+     -moz-transition:0.2s ease all;
+      -ms-transition:0.2s ease all;
+       -o-transition:0.2s ease all;
+          transition:0.2s ease all;
+}
+
+
+
+.txtinfo{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+
+.btnlogin {
+  background-color: #9b51e0;
+  border-color: #ecf0f3;
+  border-radius: 4vh;
+  box-shadow: -2px -2px 8px hsla(0,0%,100%,.25),1.5px 1.5px 3px rgba(119,104,129,.3),inset 3px 3px 4px hsla(0,0%,100%,.4);
+  color: #fff;
+  height: 55px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 0;
+  width: 40%;
+}
+.btnlogin:hover{
+  background-color: #7b2fc2;
+}
+
+.inputfile1 {
+  margin-top: 1rem;
+}
+
+.inputfile1::file-selector-button {
+  margin:0;
+  margin-right: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width:auto;
+  /* max-width:300px; */
+  height:auto;
+  background-color:#929292;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  text-align:center;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -webkit-transition:0.2s ease all;
+     -moz-transition:0.2s ease all;
+      -ms-transition:0.2s ease all;
+       -o-transition:0.2s ease all;
+          transition:0.2s ease all;
+}
+
+.password .form-input, .username .form-input {
+  border-radius: 2vh!important;
+  height: 40px;
+}
+
+.ant-input-affix-wrapper {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  color: rgba(0,0,0,.85);
+  display: inline-block;
+  display: inline-flex;
+  font-size: 14px;
+  line-height: 1.5715;
+  min-width: 0;
+  padding: 4px 11px;
+  position: relative;
+  transition: all .3s;
+  width: 100%;
+}
+
+.ant-form-item-control-input {
+  align-items: center;
+  display: flex;
+  min-height: 32px;
+  position: relative;
+}
+.ant-form-item-control-input-content {
+  flex: auto;
+  max-width: 100%;
+}
+
+.blur {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
+  height: 50vh;
+	width: 100%;
+}
+
+
+
+#page-wrap {
+  text-align: center;
+
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: hidden;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white;
+}
+
+/* The rest copied directly from react-burger-menu docs */
+
+/* Position and sizing of burger button */
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+  border-radius: 2px;
+
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 30px;
+  width: 30px;
+
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+  
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #505050;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+#app-cover {
+  display: table;
+  width: 600px;
+  margin: 80px auto;
+}
+
+.row {
+  display: table-row;
+}
+
+.toggle-button-cover {
+  display: table-cell;
+  position: relative;
+  width: 200px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.button-cover,
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.btnsty3 {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 30px;
+  margin: -20px auto 0 auto;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.btnsty3.r,
+.btnsty3.r .layer {
+  border-radius: 100px;
+}
+
+.btnsty3.b2 {
+  border-radius: 2px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #ebf7fc;
+  transition: 0.3s ease all;
+  z-index: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#button-13 .knobs:before,
+#button-13 .knobs:after,
+#button-13 .knobs span {
+  position: absolute;
+  top: 5px;
+  width: 30px;
+  height: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px 4px;
+  border-radius: 2px;
+  transition: 0.3s ease all;
+}
+
+#button-13 .knobs:before,
+#button-13 .knobs:after {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #4e4e4e;
+  z-index: 1;
+}
+
+#button-13 .knobs:before {
+  margin-top: auto;
+  margin-bottom: auto;
+  content: "เปิด";
+  left: 4px;
+}
+
+#button-13 .knobs:after {
+  margin-top: auto;
+  margin-bottom: auto;
+  content: "ปิด";
+  right: 4px;
+}
+
+#button-13 .knobs span {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 30px;
+  left: 37px;
+  background-color: #03a9f4;
+  z-index: 2;
+}
+
+#button-13 .checkbox:checked + .knobs span {
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 4px;
+  background-color: #f44336;
+}
+
+#button-13 .checkbox:checked ~ .layer {
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #fcebeb;
+}
+
+
+
+
